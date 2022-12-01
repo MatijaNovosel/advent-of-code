@@ -1,3 +1,3 @@
-export const sum = (array) => {
-  return array.reduce((a, b) => a + b);
+export const sum = (...args) => {
+  return args.reduce((a, b) => a + b);
 };

@@ -1,5 +1,4 @@
 import fs from "fs";
-import { sum } from "../utils/index.js";
 
 const fileContents = fs.readFileSync("input.txt");
 const lines = fileContents
@@ -30,4 +29,4 @@ calories.sort((a, b) => b - a);
 console.log(calories[0]);
 
 // Part 2 - Sum of top 3 calorie counts
-console.log(sum([calories[0], calories[1], calories[2]]));
+console.log(calories[0] + calories[1] + calories[2]);
