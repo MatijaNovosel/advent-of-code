@@ -27,6 +27,4 @@ chunked.sort((a, b) => sum(b) - sum(a));
 console.log(sum(chunked[0]));
 
 // Part 2 - Sum of top 3 calorie counts
-console.log(
-  sum([...chunked[0], ...chunked[1], ...chunked[2]])
-);
+console.log(sum([...chunked[0], ...chunked[1], ...chunked[2]]));
