@@ -1,0 +1,21 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "<h1 align=center>Advent of code</h1>\r <p align=center>Advent of code 2022</p>",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatijaNovosel/advent-of-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatijaNovosel/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/MatijaNovosel/advent-of-code#readme"
+}
