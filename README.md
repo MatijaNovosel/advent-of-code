@@ -5,6 +5,8 @@
 <h1 align=center>Advent of code 2022</h1>
 <p align=center>Advent of code 2022 - Solved with Javascript</p>
 
+## Progress
+
 - [x] [Day 1 - Calorie Counting](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/01%20-%20Calorie%20Counting)
 - [ ] Day 2
 - [ ] Day 3
