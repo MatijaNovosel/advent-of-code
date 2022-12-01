@@ -1,4 +1,5 @@
 import fs from "fs";
+import { splitByValue, sum } from "../utils/index.js";
 
 const fileContents = fs.readFileSync("input.txt");
 const lines = fileContents
@@ -6,23 +7,11 @@ const lines = fileContents
   .split("\n")
   .map((x) => x.trim());
 
-let accumulator = 0;
+const grouped = splitByValue(lines, "");
 const elfCalories = [];
 
-lines.forEach((l, i) => {
-  if (i === lines.length - 1) {
-    accumulator += +lines[i];
-    elfCalories.push(accumulator);
-    return;
-  }
-
-  if (l.length === 0) {
-    elfCalories.push(accumulator);
-    accumulator = 0;
-    return;
-  }
-
-  accumulator += +lines[i];
+grouped.forEach((g) => {
+  elfCalories.push(sum(...g.map((x) => +x)));
 });
 
 elfCalories.sort((a, b) => b - a);
