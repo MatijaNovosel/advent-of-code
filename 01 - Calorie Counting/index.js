@@ -2,29 +2,32 @@ import fs from "fs";
 import { sum } from "../utils/index.js";
 
 const fileContents = fs.readFileSync("input.txt");
-const lines = fileContents.toString().split("\n");
+const lines = fileContents
+  .toString()
+  .split("\n")
+  .map((x) => x.trim());
 
-let accumulator = [];
-const chunked = [];
+let accumulator = 0;
+const calories = [];
 
 lines.forEach((l, i) => {
   if (i === lines.length - 1 && accumulator.length === 0) {
-    accumulator.push(parseInt(l));
-    chunked.push(accumulator);
+    accumulator += +lines[i];
+    calories.push(accumulator);
     return;
   }
   if (l.length === 0) {
-    chunked.push(accumulator);
-    accumulator = [];
+    calories.push(accumulator);
+    accumulator = 0;
     return;
   }
-  accumulator.push(parseInt(l));
+  accumulator += +lines[i];
 });
 
-chunked.sort((a, b) => sum(b) - sum(a));
+calories.sort((a, b) => b - a);
 
 // Part 1 - Max calories of an individual elf
-console.log(sum(chunked[0]));
+console.log(calories[0]);
 
 // Part 2 - Sum of top 3 calorie counts
-console.log(sum([...chunked[0], ...chunked[1], ...chunked[2]]));
+console.log(sum([calories[0], calories[1], calories[2]]));
