@@ -7,26 +7,28 @@ const lines = fileContents
   .map((x) => x.trim());
 
 let accumulator = 0;
-const calories = [];
+const elfCalories = [];
 
 lines.forEach((l, i) => {
-  if (i === lines.length - 1 && accumulator.length === 0) {
+  if (i === lines.length - 1) {
     accumulator += +lines[i];
-    calories.push(accumulator);
+    elfCalories.push(accumulator);
     return;
   }
+
   if (l.length === 0) {
-    calories.push(accumulator);
+    elfCalories.push(accumulator);
     accumulator = 0;
     return;
   }
+
   accumulator += +lines[i];
 });
 
-calories.sort((a, b) => b - a);
+elfCalories.sort((a, b) => b - a);
 
 // Part 1 - Max calories of an individual elf
-console.log(calories[0]);
+console.log(elfCalories[0]);
 
 // Part 2 - Sum of top 3 calorie counts
-console.log(calories[0] + calories[1] + calories[2]);
+console.log(elfCalories[0] + elfCalories[1] + elfCalories[2]);
