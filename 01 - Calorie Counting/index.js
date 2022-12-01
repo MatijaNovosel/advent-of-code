@@ -21,12 +21,12 @@ lines.forEach((l, i) => {
   accumulator.push(parseInt(l));
 });
 
-const sortedChunked = chunked.sort((a, b) => sum(b) - sum(a));
+chunked.sort((a, b) => sum(b) - sum(a));
 
 // Part 1 - Max calories of an individual elf
-console.log(sum(sortedChunked[0]));
+console.log(sum(chunked[0]));
 
 // Part 2 - Sum of top 3 calorie counts
 console.log(
-  sum([...sortedChunked[0], ...sortedChunked[1], ...sortedChunked[2]])
+  sum([...chunked[0], ...chunked[1], ...chunked[2]])
 );
