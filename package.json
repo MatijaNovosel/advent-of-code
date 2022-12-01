@@ -1,7 +1,7 @@
 {
-  "name": "advent-of-code",
+  "name": "advent-of-code-2022",
   "version": "1.0.0",
-  "description": "<h1 align=center>Advent of code</h1>\r <p align=center>Advent of code 2022</p>",
+  "description": "Advent of code 2022 - Solved with Javascript",
   "main": "index.js",
   "type": "module",
   "scripts": {
