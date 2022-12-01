@@ -3,7 +3,9 @@
 </div>
 
 <h1 align=center>Advent of code 2022</h1>
-<p align=center>[Advent of code 2022](https://adventofcode.com/) - Solved with Javascript</p>
+<p align=center>
+  <a href="https://adventofcode.com/"> Advent of code 2022 </a> - Solved with Javascript
+</p>
 
 ## Progress
 
