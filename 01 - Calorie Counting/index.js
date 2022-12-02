@@ -1,13 +1,6 @@
-import fs from "fs";
-import { splitByValue, sum } from "../utils/index.js";
+import { parseLines, splitByValue, sum } from "../utils/index.js";
 
-const fileContents = fs.readFileSync("input.txt");
-
-const lines = fileContents
-  .toString()
-  .split("\n")
-  .map((x) => x.trim());
-
+const lines = parseLines("../01 - Calorie Counting/input.txt");
 const grouped = splitByValue(lines, "");
 const elfCalories = grouped
   .map((g) => sum(...g.map((x) => +x)))

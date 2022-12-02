@@ -1,3 +1,5 @@
+import fs from "fs";
+
 export const sum = (...args) => {
   return args.reduce((a, b) => a + b);
 };
@@ -14,4 +16,13 @@ export const splitByValue = (arr, val) => {
   }
 
   return result;
+};
+
+export const parseLines = (fileName) => {
+  const fileContents = fs.readFileSync(fileName);
+
+  return fileContents
+    .toString()
+    .split("\n")
+    .map((x) => x.trim());
 };
