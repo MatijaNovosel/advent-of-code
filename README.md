@@ -11,7 +11,7 @@
 
 - [x] [Day 1 - Calorie Counting](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/01%20-%20Calorie%20Counting)
 - [x] [Day 2 - Rock Paper Scissors](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/02%20-%20Rock%20Paper%20Scissors)
-- [ ] Day 3
+- [x] [Day 3 - Rucksack Reorganization](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/03%20-%20Rucksack%20Reorganization)
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6

@@ -18,12 +18,10 @@ let outcomes = {
 };
 
 // Part 1
-
 let res = sum(...lines.map((x) => outcomes[x]));
 console.log(res);
 
 // Part 2
-
 outcomes = { ...outcomes, AZ: 8, AX: 3, AY: 4, CZ: 7, CX: 2, CY: 6 };
 
 res = sum(...lines.map((x) => outcomes[x]));

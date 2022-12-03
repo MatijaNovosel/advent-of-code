@@ -26,3 +26,13 @@ export const parseLines = (fileName) => {
     .split("\n")
     .map((x) => x.trim());
 };
+
+export const chunk = (arr, chunkSize) => {
+  const result = [];
+
+  for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+    result.push(arr.slice(i, i + chunkSize));
+  }
+
+  return result;
+};
