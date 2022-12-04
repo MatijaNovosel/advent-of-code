@@ -36,3 +36,14 @@ export const chunk = (arr, chunkSize) => {
 
   return result;
 };
+
+export const range = (start, end) => {
+  return Array(end - start + 1)
+    .fill()
+    .map((_, idx) => start + idx);
+};
+
+export const intersect = (a, b) => {
+  const setB = new Set(b);
+  return [...new Set(a)].filter((x) => setB.has(x));
+};
