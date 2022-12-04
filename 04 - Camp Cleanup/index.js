@@ -2,40 +2,32 @@ import { intersect, parseLines, range } from "../utils/index.js";
 
 const lines = parseLines("../04 - Camp Cleanup/input.txt");
 
-const ranges = lines.map((l) => {
-  const [firstHalf, secondHalf] = l.split(",");
-  const [firstStart, firstEnd] = firstHalf.split("-");
-  const [secondStart, secondEnd] = secondHalf.split("-");
+const intersections = lines.map((l) => {
+  const numbers = l.split(",").flatMap((x) => x.split("-").map((x) => +x));
 
-  const firstRange = range(+firstStart, +firstEnd);
-  const secondRange = range(+secondStart, +secondEnd);
+  const r1 = range(numbers[0], numbers[1]);
+  const r2 = range(numbers[2], numbers[3]);
 
-  return [firstRange, secondRange];
+  return { r1, r2, intersection: intersect(r1, r2) };
 });
 
 // Part 1
-let count = 0;
-
-ranges.forEach(([r1, r2]) => {
-  const result = intersect(r1, r2);
-
+let count = intersections.reduce((acc, { r1, r2, intersection }) => {
   if (
-    result.toString() === r1.toString() ||
-    result.toString() === r2.toString()
+    intersection.toString() === r1.toString() ||
+    intersection.toString() === r2.toString()
   ) {
-    count++;
+    acc++;
   }
-});
+  return acc;
+}, 0);
 
 console.log(count);
 
 // Part 2
-count = 0;
-
-ranges.forEach(([r1, r2]) => {
-  if (intersect(r1, r2).length > 0) {
-    count++;
-  }
-});
+count = intersections.reduce(
+  (acc, { intersection }) => (acc += !!intersection.length),
+  0
+);
 
 console.log(count);
