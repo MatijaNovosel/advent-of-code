@@ -7,6 +7,10 @@
   <a href="https://adventofcode.com/"> Advent of code 2022 </a> - Solved with Javascript
 </p>
 
+## Run the code
+
+`cd` inside of any day folder and run `node index.js`
+
 ## Progress
 
 - [x] [Day 1 - Calorie Counting](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/01%20-%20Calorie%20Counting)
