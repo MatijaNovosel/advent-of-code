@@ -1,13 +1,11 @@
 import { intersect, parseLines, range } from "../utils/index.js";
 
-const lines = parseLines("../04 - Camp Cleanup/input.txt");
+const lines = parseLines("../04 - Camp Cleanup/input.txt", true);
 
 const intersections = lines.map((l) => {
   const numbers = l.split(",").flatMap((x) => x.split("-").map((x) => +x));
-
   const r1 = range(numbers[0], numbers[1]);
   const r2 = range(numbers[2], numbers[3]);
-
   return { r1, r2, intersection: intersect(r1, r2) };
 });
 

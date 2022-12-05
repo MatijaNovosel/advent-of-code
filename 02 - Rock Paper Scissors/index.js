@@ -1,7 +1,7 @@
 import { parseLines, sum } from "../utils/index.js";
 
-const lines = parseLines("../02 - Rock Paper Scissors/input.txt").map((x) =>
-  x.replace(" ", "")
+const lines = parseLines("../02 - Rock Paper Scissors/input.txt", true).map(
+  (x) => x.replace(" ", "")
 );
 
 // Hardcoding works, but definitely not the best or ideal solution

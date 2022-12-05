@@ -1,6 +1,6 @@
 import { chunk, parseLines } from "../utils/index.js";
 
-const lines = parseLines("../03 - Rucksack Reorganization/input.txt").map(
+const lines = parseLines("../03 - Rucksack Reorganization/input.txt", true).map(
   (items) => items.split("")
 );
 

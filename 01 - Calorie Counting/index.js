@@ -1,6 +1,6 @@
 import { parseLines, splitByValue, sum } from "../utils/index.js";
 
-const lines = parseLines("../01 - Calorie Counting/input.txt");
+const lines = parseLines("../01 - Calorie Counting/input.txt", true);
 const grouped = splitByValue(lines, "");
 const elfCalories = grouped
   .map((g) => sum(...g.map((x) => +x)))

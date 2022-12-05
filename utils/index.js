@@ -18,13 +18,14 @@ export const splitByValue = (arr, val) => {
   return result;
 };
 
-export const parseLines = (fileName) => {
-  const fileContents = fs.readFileSync(fileName);
+export const parseLines = (fileName, trim) => {
+  const contents = fs.readFileSync(fileName).toString().split("\n");
 
-  return fileContents
-    .toString()
-    .split("\n")
-    .map((x) => x.trim());
+  if (trim) {
+    return contents.map((x) => x.trim());
+  }
+
+  return contents;
 };
 
 export const chunk = (arr, chunkSize) => {
