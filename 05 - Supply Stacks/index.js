@@ -6,7 +6,9 @@ const lines = parseLines("../05 - Supply Stacks/input.txt");
 
 const instructionsIdx = lines.findIndex((x) => x.includes("move"));
 const boxLines = lines.slice(0, instructionsIdx - 2);
-const instructionLines = lines.slice(instructionsIdx, lines.length);
+const instructionLines = lines
+  .slice(instructionsIdx, lines.length)
+  .map((l) => l.split(" ").filter((x) => !isNaN(parseFloat(x))));
 
 const stacks = [];
 const boxLineLength = boxLines[0].length;
@@ -25,10 +27,7 @@ const stacks1 = [...stacks];
 
 // Part 1
 instructionLines.forEach((l) => {
-  const [numberToMove, origin, destination] = l
-    .split(" ")
-    .filter((x) => !isNaN(parseFloat(x)));
-
+  const [numberToMove, origin, destination] = l;
   for (let i = 0; i < numberToMove; i++) {
     stacks1[destination - 1].unshift(stacks1[origin - 1].shift());
   }
