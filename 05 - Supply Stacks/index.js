@@ -3,7 +3,6 @@ import { parseLines } from "../utils/index.js";
 const lines = parseLines("../05 - Supply Stacks/input.txt");
 
 // Parsing the text and creating the stacks
-
 const instructionsIdx = lines.findIndex((x) => x.includes("move"));
 const boxLines = lines.slice(0, instructionsIdx - 2);
 const instructionLines = lines
@@ -42,9 +41,9 @@ instructionLines.forEach((l) => {
   const [numberToMove, origin, destination] = l;
   const toMove = [];
   for (let i = 0; i < numberToMove; i++) {
-    toMove.push(stacks2[origin - 1].shift());
+    toMove.unshift(stacks2[origin - 1].shift());
   }
-  toMove.reverse().forEach((x) => stacks2[destination - 1].unshift(x));
+  toMove.forEach((x) => stacks2[destination - 1].unshift(x));
 });
 
 console.log(stacks2.map((stack) => stack[0]).join(""));
