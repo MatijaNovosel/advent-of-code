@@ -7,7 +7,7 @@
   <a href="https://adventofcode.com/"> Advent of code 2022 </a> - Solved with Javascript
 </p>
 
-## Run the code
+## Usage
 
 `cd` inside of any day folder and run `node index.js`
 
