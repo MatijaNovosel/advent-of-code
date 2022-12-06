@@ -1,41 +1,26 @@
 import fs from "fs";
 
-export const sum = (...args) => {
-  return args.reduce((a, b) => a + b);
-};
+export const sum = (...args) => args.reduce((a, b) => a + b);
 
 export const splitByValue = (arr, val) => {
   const result = [[]];
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == val) {
-      result.push([]);
-    } else {
-      result[result.length - 1].push(arr[i]);
-    }
-  }
-
+  for (let i = 0; i < arr.length; i++)
+    if (arr[i] == val) result.push([]);
+    else result[result.length - 1].push(arr[i]);
   return result;
 };
 
 export const parseLines = (fileName, trim) => {
   const contents = fs.readFileSync(fileName).toString().split("\n");
   contents.pop();
-
-  if (trim) {
-    return contents.map((x) => x.trim());
-  }
-
+  if (trim) return contents.map((x) => x.trim());
   return contents;
 };
 
 export const chunk = (arr, chunkSize) => {
   const result = [];
-
-  for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+  for (let i = 0, len = arr.length; i < len; i += chunkSize)
     result.push(arr.slice(i, i + chunkSize));
-  }
-
   return result;
 };
 

@@ -6,9 +6,7 @@ const lines = parseLines("../03 - Rucksack Reorganization/input.txt", true).map(
 
 const values = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
   .split("")
-  .reduce((prev, curr, i) => {
-    return { ...prev, [curr]: i + 1 };
-  }, {});
+  .reduce((prev, curr, i) => ({ ...prev, [curr]: i + 1 }), {});
 
 // Part 1
 let itemPrioritySum = 0;

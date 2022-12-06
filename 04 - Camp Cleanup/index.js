@@ -14,9 +14,8 @@ let count = intersections.reduce((acc, { r1, r2, intersection }) => {
   if (
     intersection.toString() === r1.toString() ||
     intersection.toString() === r2.toString()
-  ) {
+  )
     acc++;
-  }
   return acc;
 }, 0);
 
