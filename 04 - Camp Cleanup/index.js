@@ -1,4 +1,5 @@
-import { intersect, parseLines, range } from "../utils/index.js";
+import { intersect, range } from "matija-utils";
+import { parseLines } from "../utils/index.js";
 
 const lines = parseLines("../04 - Camp Cleanup/input.txt", true);
 

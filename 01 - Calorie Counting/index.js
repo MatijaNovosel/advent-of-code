@@ -1,4 +1,5 @@
-import { parseLines, splitByValue, sum } from "../utils/index.js";
+import { splitByValue, sum } from "matija-utils";
+import { parseLines } from "../utils/index.js";
 
 const lines = parseLines("../01 - Calorie Counting/input.txt", true);
 const grouped = splitByValue(lines, "");

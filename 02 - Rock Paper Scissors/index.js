@@ -1,4 +1,5 @@
-import { parseLines, sum } from "../utils/index.js";
+import { sum } from "matija-utils";
+import { parseLines } from "../utils/index.js";
 
 const lines = parseLines("../02 - Rock Paper Scissors/input.txt", true).map(
   (x) => x.replace(" ", "")

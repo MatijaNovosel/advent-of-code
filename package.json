@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MatijaNovosel/advent-of-code/issues"
   },
-  "homepage": "https://github.com/MatijaNovosel/advent-of-code#readme"
+  "homepage": "https://github.com/MatijaNovosel/advent-of-code#readme",
+  "dependencies": {
+    "matija-utils": "^1.0.5"
+  }
 }
