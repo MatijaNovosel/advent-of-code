@@ -1,5 +1,14 @@
 import { parseLines } from "../utils/index.js";
 
+const iterateSum = (obj) => {
+  let res = 0;
+  Object.values(obj).forEach((val) => {
+    if (typeof val === "object") res += iterateSum(val);
+    else res += val;
+  });
+  return res;
+};
+
 const lines = parseLines("../07 - No Space Left On Device/input.txt", true)
   .join(";")
   .split("$ ");
@@ -33,24 +42,20 @@ for (let i = 2; i < lines.length; i++) {
   }
 }
 
-// Part 1
-const maxSize = 100_000;
+const totalSize = iterateSum(fs["/"]);
 let dirSum = 0;
-
-const iterateSum = (obj) => {
-  let res = 0;
-  Object.values(obj).forEach((val) => {
-    if (typeof val === "object") res += iterateSum(val);
-    else res += val;
-  });
-  return res;
-};
+let dirToDeleteSize = totalSize;
 
 const iterate = (obj) => {
   Object.values(obj).forEach((val) => {
     if (typeof val === "object") {
       const size = iterateSum(val);
-      if (size < maxSize) dirSum += size;
+      if (size < 100_000) dirSum += size;
+      if (
+        70_000_000 - totalSize + size >= 30_000_000 &&
+        size <= dirToDeleteSize
+      )
+        dirToDeleteSize = size;
       iterate(val);
     }
   });
@@ -58,4 +63,8 @@ const iterate = (obj) => {
 
 iterate(fs["/"]);
 
+// Part 1
 console.log(dirSum);
+
+// Part 2
+console.log(dirToDeleteSize);
