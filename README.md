@@ -9,7 +9,8 @@
 
 ## 🚀 Usage
 
-`cd` inside of any day folder and run `node index.js`
+1. Install the dependencies: `npm i` (only one being my [utilies package](https://github.com/MatijaNovosel/matija-utils))
+2. `cd` inside of any day folder and run `node index.js`
 
 ## 📈 Progress
 
