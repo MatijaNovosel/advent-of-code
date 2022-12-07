@@ -1,29 +1,31 @@
-import { sum } from "matija-utils";
+import { mod } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
 const lines = parseLines("../02 - Rock Paper Scissors/input.txt", true).map(
-  (x) => x.replace(" ", "")
+  (x) => x.split(" ")
 );
 
-// Hardcoding works, but definitely not the best or ideal solution
-let outcomes = {
-  AZ: 3,
-  AX: 4,
-  AY: 8,
-  BZ: 9,
-  BX: 1,
-  BY: 5,
-  CZ: 6,
-  CX: 7,
-  CY: 2
-};
-
 // Part 1
-let res = sum(...lines.map((x) => outcomes[x]));
-console.log(res);
+console.log(
+  lines.reduce((acc, l) => {
+    let [p, e] = l;
+    p = p.charCodeAt() - "A".charCodeAt() + 1;
+    e = e.charCodeAt() - "X".charCodeAt() + 1;
+    if (p === e) acc += 3;
+    else if (mod(e - p, 3) === 1) acc += 6;
+    acc += e;
+    return acc;
+  }, 0)
+);
 
 // Part 2
-outcomes = { ...outcomes, AZ: 8, AX: 3, AY: 4, CZ: 7, CX: 2, CY: 6 };
-
-res = sum(...lines.map((x) => outcomes[x]));
-console.log(res);
+console.log(
+  lines.reduce((acc, l) => {
+    let [p, outcome] = l;
+    p = p.charCodeAt() - "A".charCodeAt();
+    if (outcome === "X") acc += mod(p - 1, 3) + 1;
+    else if (outcome === "Y") acc += 3 + p + 1;
+    else acc += 6 + mod(p + 1, 3) + 1;
+    return acc;
+  }, 0)
+);

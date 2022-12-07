@@ -23,7 +23,6 @@ console.log(itemPrioritySum);
 
 // Part 2
 itemPrioritySum = 0;
-
 const chunked = chunk(lines, 3);
 
 chunked.forEach((items) => {
