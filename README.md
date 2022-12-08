@@ -9,6 +9,8 @@
 
 ## 🚀 Usage
 
+The folders are organized by day and contain the solution `index.js`, the input `input.txt` and the task description `README.md`.
+
 1. Install the dependencies: `npm i` (only one being my [utilities package](https://github.com/MatijaNovosel/matija-utils))
 2. Run `npm day {n}` to see both of the outputs of a specified day (1 - 25)
 
