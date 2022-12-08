@@ -14,39 +14,35 @@ const discover = (x, y) => {
   let scl = 0;
 
   for (let i = x - 1; i >= 0; i--) {
+    sct++;
     if (lines[i][y] >= val) {
       visibility = visibility & 0b0111;
-      sct++;
       break;
     }
-    sct++;
   }
 
   for (let i = y + 1; i < lines[x].length; i++) {
+    scr++;
     if (lines[x][i] >= val) {
       visibility = visibility & 0b1011;
-      scr++;
       break;
     }
-    scr++;
   }
 
   for (let i = x + 1; i < lines.length; i++) {
+    scb++;
     if (lines[i][y] >= val) {
       visibility = visibility & 0b1101;
-      scb++;
       break;
     }
-    scb++;
   }
 
   for (let i = y - 1; i >= 0; i--) {
+    scl++;
     if (lines[x][i] >= val) {
       visibility = visibility & 0b1110;
-      scl++;
       break;
     }
-    scl++;
   }
 
   return {
