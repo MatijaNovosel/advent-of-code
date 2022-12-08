@@ -9,7 +9,7 @@
 
 ## 🚀 Usage
 
-1. Install the dependencies: `npm i` (only one being my [utilies package](https://github.com/MatijaNovosel/matija-utils))
+1. Install the dependencies: `npm i` (only one being my [utilities package](https://github.com/MatijaNovosel/matija-utils))
 2. Run `npm day {n}` to see both of the outputs of a specified day (1 - 25)
 
 ## 📈 Progress
