@@ -59,7 +59,7 @@ for (let x = 1; x < lines.length - 1; x++) {
   for (let y = 1; y < lines[x].length - 1; y++) {
     const { visible, score } = discover(x, y);
     if (score > biggestScenicScore) biggestScenicScore = score;
-    innerTrees += !!visible;
+    innerTrees += visible;
   }
 }
 
