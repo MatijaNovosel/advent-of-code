@@ -21,7 +21,7 @@
 - [x] [Day 5 - Supply Stacks](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/05%20-%20Supply%20Stacks)
 - [x] [Day 6 - Tuning Trouble](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/06%20-%20Tuning%20Trouble)
 - [x] [Day 7 - No Space Left On Device](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/07%20-%20No%20Space%20Left%20On%20Device)
-- [ ] Day 8
+- [ ] [Day 8 - Treetop Tree House](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/08%20-%20Treetop%20Tree%20House)
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 12
