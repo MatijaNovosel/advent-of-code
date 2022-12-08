@@ -5,14 +5,22 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "day": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MatijaNovosel/advent-of-code.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "javascript",
+    "advent-of-code",
+    "aoc",
+    "advent-of-code-2022",
+    "aoc2022",
+    "advent-of-code-2022-javascript",
+    "aoc2022-in-javascript"
+  ],
+  "author": "Matija Novosel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MatijaNovosel/advent-of-code/issues"

@@ -1,7 +1,7 @@
 import { splitByValue, sum } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../01 - Calorie Counting/input.txt", true);
+const lines = parseLines("./01 - Calorie Counting/input.txt", true);
 const grouped = splitByValue(lines, "");
 const elfCalories = grouped
   .map((g) => sum(...g.map((x) => +x)))

@@ -1,7 +1,7 @@
 import { intersect, range } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../04 - Camp Cleanup/input.txt", true);
+const lines = parseLines("./04 - Camp Cleanup/input.txt", true);
 
 const intersections = lines.map((l) => {
   const numbers = l.split(",").flatMap((x) => x.split("-").map((x) => +x));

@@ -1,7 +1,7 @@
 import { chunk } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../03 - Rucksack Reorganization/input.txt", true).map(
+const lines = parseLines("./03 - Rucksack Reorganization/input.txt", true).map(
   (items) => items.split("")
 );
 

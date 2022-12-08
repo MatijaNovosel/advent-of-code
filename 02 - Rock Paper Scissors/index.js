@@ -1,7 +1,7 @@
 import { mod } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../02 - Rock Paper Scissors/input.txt", true).map(
+const lines = parseLines("./02 - Rock Paper Scissors/input.txt", true).map(
   (x) => x.split(" ")
 );
 

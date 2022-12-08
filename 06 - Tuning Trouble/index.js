@@ -1,6 +1,6 @@
 import { parseLines } from "../utils/index.js";
 
-const input = parseLines("../06 - Tuning Trouble/input.txt", true)[0];
+const input = parseLines("./06 - Tuning Trouble/input.txt", true)[0];
 
 const detectMarker = (n = 4) => {
   for (let i = 0; i < input.length; i++)

@@ -1,6 +1,6 @@
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../08 - Treetop Tree House/input.txt", true);
+const lines = parseLines("./08 - Treetop Tree House/input.txt", true);
 let biggestScenicScore = 0;
 let innerTrees = 0;
 const edgeTrees = lines.length * 2 + (lines.length - 2) * 2;

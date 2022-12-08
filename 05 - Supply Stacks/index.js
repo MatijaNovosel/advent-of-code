@@ -1,6 +1,6 @@
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../05 - Supply Stacks/input.txt");
+const lines = parseLines("./05 - Supply Stacks/input.txt");
 
 // Parsing the text and creating the stacks
 const instructionsIdx = lines.findIndex((x) => x.includes("move"));

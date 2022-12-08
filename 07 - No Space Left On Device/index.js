@@ -1,5 +1,9 @@
 import { parseLines } from "../utils/index.js";
 
+const lines = parseLines("./07 - No Space Left On Device/input.txt", true)
+  .join(";")
+  .split("$ ");
+
 const iterateSum = (obj) => {
   let res = 0;
   Object.values(obj).forEach((val) => {
@@ -8,10 +12,6 @@ const iterateSum = (obj) => {
   });
   return res;
 };
-
-const lines = parseLines("../07 - No Space Left On Device/input.txt", true)
-  .join(";")
-  .split("$ ");
 
 // Constructing the file system by building a tree of sorts
 const fs = {
