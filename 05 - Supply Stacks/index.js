@@ -1,3 +1,4 @@
+import { generateArray } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
 const lines = parseLines("./05 - Supply Stacks/input.txt");
@@ -10,9 +11,7 @@ const instructionLines = lines
   .map((l) => l.split(" ").filter((x) => !isNaN(parseFloat(x))));
 
 const boxLineLength = boxLines[0].length;
-const stacks = Array((boxLineLength - 3) / 4 + 1)
-  .fill()
-  .map(() => []);
+const stacks = generateArray((boxLineLength - 1 - 3) / 4 + 1, []);
 
 boxLines.forEach((l) => {
   for (let i = 1; i < boxLineLength; i += 4)

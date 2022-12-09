@@ -1,81 +1,67 @@
+import { generateArray } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../09 - Rope Bridge/test.txt", true).map((l) =>
+const lines = parseLines("../09 - Rope Bridge/input.txt", true).map((l) =>
   l.split(" ")
 );
 
-// Constructing the matrix
-const matrix = [["s"]];
-let x = 0;
-let y = 0;
-let width = 1;
+const knots = generateArray(10, { x: 0, y: 0 });
+const history = generateArray(10, ["0-0"]);
 
-const extendMatrix = (dir, n) => {
-  console.log("extending: ", dir, n);
-
-  switch (dir) {
-    case "U":
-      for (let j = 0; j < n; j++) {
-        matrix.unshift(
-          Array(width)
-            .fill()
-            .map(() => ".")
-        );
+const move = () => {
+  for (let i = 1; i < knots.length; i++) {
+    const { x, y } = knots[i - 1];
+    const { x: knotX, y: knotY } = knots[i];
+    const offset = Math.abs(x - knotX) + Math.abs(y - knotY);
+    if (x === knotX || y === knotY) {
+      if (offset < 2) return;
+      if (x > knotX) knots[i].x++;
+      else if (x < knotX) knots[i].x--;
+      else if (y > knotY) knots[i].y++;
+      else if (y < knotY) knots[i].y--;
+    } else {
+      if (offset < 3) return;
+      if (x > knotX && y > knotY) {
+        knots[i].x++;
+        knots[i].y++;
+      } else if (x < knotX && y < knotY) {
+        knots[i].x--;
+        knots[i].y--;
+      } else if (x > knotX && y < knotY) {
+        knots[i].x++;
+        knots[i].y--;
+      } else if (x < knotX && y > knotY) {
+        knots[i].x--;
+        knots[i].y++;
       }
-      break;
-    case "R":
-      width += n;
-      for (let j = 0; j < matrix.length; j++) {
-        matrix[j] = Array(width)
-          .fill()
-          .map(() => ".");
-      }
-      break;
-    case "D":
-      for (let j = 0; j < n; j++) {
-        matrix.push(
-          Array(width)
-            .fill()
-            .map(() => ".")
-        );
-      }
-      break;
-    case "L":
-      width += n;
-      for (let j = 0; j < matrix.length; j++) {
-        if (matrix[j].length < width) {
-          Array(n).forEach(() => matrix[j].unshift("."));
-        }
-      }
-      break;
+    }
   }
 };
 
-for (let i = 0; i < lines.length; i++) {
-  matrix[x][y] = ".";
-  let [dir, n] = lines[i];
-  n = +n;
-
-  console.log({ dir, n });
-
-  switch (dir) {
-    case "U":
-      if (x - n < 0) extendMatrix(dir, Math.abs(x - n));
-      x += Math.abs(x - n);
-      break;
-    case "R":
-      if (y + n > width) extendMatrix(dir, Math.abs(y + n - width));
-      break;
-    case "D":
-      if (x + n > matrix.length) extendMatrix(dir, Math.abs(x - n));
-      break;
-    case "L":
-      if (y - n < 0) extendMatrix(dir, Math.abs(y + n - width));
-      y += y + n - width;
-      break;
+lines.forEach((l) => {
+  let [dir, n] = l;
+  for (let i = 0; i < +n; i++) {
+    switch (dir) {
+      case "U":
+        knots[0].y--;
+        break;
+      case "R":
+        knots[0].x++;
+        break;
+      case "D":
+        knots[0].y++;
+        break;
+      case "L":
+        knots[0].x--;
+        break;
+    }
+    move();
+    knots.forEach((knot, i) => history[i].push(`${knot.x}-${knot.y}`));
   }
+});
 
-  matrix[x][y] = "H";
-  console.log({ x, y });
-  console.table(matrix);
-}
+// Part 1
+console.log(new Set(history[1]).size);
+
+// Part 2
+console.log(new Set(history[9]).size);

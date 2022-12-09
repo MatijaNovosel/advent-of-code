@@ -3,7 +3,6 @@ import { parseLines } from "../utils/index.js";
 const lines = parseLines("./08 - Treetop Tree House/input.txt", true);
 let biggestScenicScore = 0;
 let innerTrees = 0;
-const edgeTrees = lines.length * 2 + (lines.length - 2) * 2;
 
 const discover = (x, y) => {
   const val = lines[x][y];
@@ -51,7 +50,7 @@ for (let x = 1; x < lines.length - 1; x++)
   }
 
 // Part 1
-console.log(innerTrees + edgeTrees);
+console.log(innerTrees + lines.length * 2 + (lines.length - 2) * 2);
 
 // Part 2
 console.log(biggestScenicScore);

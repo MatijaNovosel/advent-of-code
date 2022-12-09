@@ -24,7 +24,7 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [x] [Day 6 - Tuning Trouble](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/06%20-%20Tuning%20Trouble)
 - [x] [Day 7 - No Space Left On Device](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/07%20-%20No%20Space%20Left%20On%20Device)
 - [x] [Day 8 - Treetop Tree House](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/08%20-%20Treetop%20Tree%20House)
-- [ ] Day 9
+- [x] [Day 9 - Rope Bridge](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/09%20-%20Rope%20Bridge)
 - [ ] Day 10
 - [ ] Day 12
 - [ ] Day 13
