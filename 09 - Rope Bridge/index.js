@@ -1,7 +1,7 @@
 import { generateArray } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../09 - Rope Bridge/input.txt", true).map((l) =>
+const lines = parseLines("./09 - Rope Bridge/input.txt", true).map((l) =>
   l.split(" ")
 );
 
