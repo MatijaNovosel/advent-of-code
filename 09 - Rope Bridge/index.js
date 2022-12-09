@@ -18,7 +18,7 @@ const move = () => {
       if (x > knotX) knots[i].x++;
       else if (x < knotX) knots[i].x--;
       else if (y > knotY) knots[i].y++;
-      else if (y < knotY) knots[i].y--;
+      else knots[i].y--;
     } else {
       if (offset < 3) return;
       if (x > knotX && y > knotY) {
@@ -30,7 +30,7 @@ const move = () => {
       } else if (x > knotX && y < knotY) {
         knots[i].x++;
         knots[i].y--;
-      } else if (x < knotX && y > knotY) {
+      } else {
         knots[i].x--;
         knots[i].y++;
       }
