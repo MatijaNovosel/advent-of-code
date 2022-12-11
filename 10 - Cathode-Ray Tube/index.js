@@ -1,7 +1,7 @@
 import { chunk } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../10 - Cathode-Ray Tube/input.txt", true);
+const lines = parseLines("./10 - Cathode-Ray Tube/input.txt", true);
 
 let cycle = 0;
 let position = 1;
@@ -39,6 +39,15 @@ lines.forEach((l) => {
 // Part 1
 console.log(sumOfCycleValues(20, 60, 100, 140, 180, 220));
 
-const chunked = chunk(history, 40);
-
-console.log(chunked);
+// Part 2
+for (const c of chunk(history, 40)) {
+  let line = "";
+  let lineIdx = 0;
+  for (let i = 0; i < 40; i++, lineIdx++) {
+    const { _, position } = c[i];
+    line += [position - 1, position, position + 1].includes(lineIdx)
+      ? "🟧"
+      : "⬛";
+  }
+  console.log(line);
+}
