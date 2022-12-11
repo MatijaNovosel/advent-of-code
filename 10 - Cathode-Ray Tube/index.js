@@ -7,14 +7,12 @@ let cycle = 0;
 let position = 1;
 const history = [];
 
-const sumOfCycleValues = (...args) => {
-  let sum = 0;
-  args.forEach((n) => {
-    const { cycle, position } = history.filter((h) => h.cycle === n)[0];
-    sum += cycle * position;
-  });
-  return sum;
-};
+const sumOfCycleValues = (...args) =>
+  args.reduce((acc, n) => {
+    const { cycle, position } = history.find((h) => h.cycle === n);
+    acc += cycle * position;
+    return acc;
+  }, 0);
 
 const updateHistory = ({ cycle, position }) => {
   if (!history.some((h) => h.cycle === cycle))
