@@ -2,7 +2,7 @@ import { chunk } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
 const lines = chunk(
-  parseLines("../11 - Monkey in the Middle/input.txt", true).filter(
+  parseLines("./11 - Monkey in the Middle/input.txt", true).filter(
     (l) => l !== ""
   ),
   6
