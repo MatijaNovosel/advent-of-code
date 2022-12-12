@@ -6,3 +6,7 @@ export const parseLines = (fileName, trim) => {
   if (trim) return contents.map((x) => x.trim());
   return contents;
 };
+
+export const parseInput = (fileName) => {
+  return fs.readFileSync(fileName).toString();
+};
