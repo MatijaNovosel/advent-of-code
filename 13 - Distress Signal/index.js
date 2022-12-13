@@ -30,6 +30,7 @@ console.log(
   }, 0)
 );
 
+// Part 2
 const dividers = [[[2]], [[6]]];
 const base = [...grouped.flat(1), ...dividers];
 base.sort(compare);
