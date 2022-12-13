@@ -28,7 +28,7 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [x] [Day 10 - Cathode-Ray Tube](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/10%20-%20Cathode-Ray%20Tube)
 - [x] [Day 11 - Monkey in the Middle](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/11%20-%20Monkey%20in%20the%20Middle)
 - [x] [Day 12 - Hill Climbing Algorithm](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/12%20-%20Hill%20Climbing%20Algorithm)
-- [ ] Day 13
+- [x] [Day 13 - Distress Signal](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/13%20-%20Distress%20Signal)
 - [ ] Day 14
 - [ ] Day 15
 - [ ] Day 16
