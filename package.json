@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/MatijaNovosel/advent-of-code#readme",
   "dependencies": {
-    "matija-utils": "^1.0.15"
+    "complex.js": "^2.1.1",
+    "matija-utils": "^1.0.21"
   }
 }

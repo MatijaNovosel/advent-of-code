@@ -7,6 +7,4 @@ export const parseLines = (fileName, trim) => {
   return contents;
 };
 
-export const parseInput = (fileName) => {
-  return fs.readFileSync(fileName).toString();
-};
+export const parseInput = (fileName) => fs.readFileSync(fileName).toString();
