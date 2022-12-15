@@ -22,19 +22,19 @@ const calc = (offset = 2_000_000) => {
     intervals.push({ x: sx - diff, y: sx + diff });
     if (by === offset) visited.add(bx);
   }
-  intervals.sort();
-  const arr = [];
+  intervals.sort((a, b) => a.x - b.x);
+  let arr = [];
   for (const { x, y } of intervals) {
     if (!arr.length) {
       arr.push({ x, y });
       continue;
     }
-    const { y: endY } = end(arr, 1);
-    if (x > endY + 1) {
+    const lastElement = end(arr, 1);
+    if (x > lastElement.y + 1) {
       arr.push({ x, y });
       continue;
     }
-    end(arr, 1).y = Math.max(endY, y);
+    lastElement.y = Math.max(lastElement.y, y);
   }
   return { intervals, visited, arr };
 };
