@@ -2,7 +2,7 @@ import { difference, end, range } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
 const coordinates = parseLines(
-  "../15 - Beacon Exclusion Zone/input.txt",
+  "./15 - Beacon Exclusion Zone/input.txt",
   true
 ).map((l) => {
   return l
