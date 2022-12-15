@@ -1,7 +1,7 @@
 import { generateArray } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const cave = parseLines("../14 - Regolith Reservoir/input.txt", true).map((l) =>
+const cave = parseLines("./14 - Regolith Reservoir/input.txt", true).map((l) =>
   l.split(" -> ").map((n) => n.split(",").map((n) => +n))
 );
 

@@ -29,8 +29,8 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [x] [Day 11 - Monkey in the Middle](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/11%20-%20Monkey%20in%20the%20Middle)
 - [x] [Day 12 - Hill Climbing Algorithm](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/12%20-%20Hill%20Climbing%20Algorithm)
 - [x] [Day 13 - Distress Signal](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/13%20-%20Distress%20Signal)
-- [ ] [Day 14 - Regolith Reservoir](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/14%20-%20Regolith%20Reservoir)
-- [ ] Day 15
+- [x] [Day 14 - Regolith Reservoir](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/14%20-%20Regolith%20Reservoir)
+- [ ] [Day 15 - Beacon Exclusion Zone](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/15%20-%20Beacon%20Exclusion%20Zone)
 - [ ] Day 16
 - [ ] Day 17
 - [ ] Day 18
