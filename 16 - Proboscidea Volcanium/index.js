@@ -1,7 +1,7 @@
 import { range } from "matija-utils";
 import { parseLines } from "../utils/index.js";
 
-const lines = parseLines("../16 - Proboscidea Volcanium/input.txt", true);
+const lines = parseLines("./16 - Proboscidea Volcanium/input.txt", true);
 
 const valves = {};
 const tunnels = {};
