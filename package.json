@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/MatijaNovosel/advent-of-code#readme",
   "dependencies": {
-    "matija-utils": "^1.0.23"
+    "matija-utils": "^1.0.24"
   }
 }

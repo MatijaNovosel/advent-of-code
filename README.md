@@ -33,7 +33,7 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [x] [Day 15 - Beacon Exclusion Zone](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/15%20-%20Beacon%20Exclusion%20Zone)
 - [x] [Day 16 - Proboscidea Volcanium](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/16%20-%20Proboscidea%20Volcanium)
 - [ ] [Day 17 - Pyroclastic Flow](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/17%20-%20Pyroclastic%20Flow)
-- [ ] Day 18
+- [ ] [Day 18 - Boiling Boulders](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/18%20-%20Boiling%20Boulders)
 - [ ] Day 19
 - [ ] Day 20
 - [ ] Day 21
