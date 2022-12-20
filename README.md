@@ -35,7 +35,7 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [ ] [Day 17 - Pyroclastic Flow](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/17%20-%20Pyroclastic%20Flow)
 - [x] [Day 18 - Boiling Boulders](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/18%20-%20Boiling%20Boulders)
 - [ ] [Day 19 - Not Enough Minerals](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/19%20-%20Not%20Enough%20Minerals)
-- [ ] Day 20
+- [ ] [Day 20 - Grove Positioning System](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/20%20-%20Grove%20Positioning%20System)
 - [ ] Day 21
 - [ ] Day 22
 - [ ] Day 23
