@@ -25,32 +25,32 @@ for (let i = 0; i < len; i++) {
 }
 
 const parseNodes = (nodes, acc, iteratee) => {
-  for (const k of nodes) {
-    if (k.n === 0) {
-      acc = k;
+  for (const node of nodes) {
+    if (node.n === 0) {
+      acc = node;
       continue;
     }
-    iteratee = k;
-    if (k.n > 0) {
-      for (let i = 0; i < mod(k.n, nodes.length - 1); i++)
+    iteratee = node;
+    if (node.n > 0) {
+      for (let i = 0; i < mod(node.n, nodes.length - 1); i++)
         iteratee = iteratee.r;
-      if (equal(k, iteratee)) continue;
-      k.r.l = k.l;
-      k.l.r = k.r;
-      iteratee.r.l = k;
-      k.r = iteratee.r;
-      iteratee.r = k;
-      k.l = iteratee;
+      if (equal(node, iteratee)) continue;
+      node.r.l = node.l;
+      node.l.r = node.r;
+      iteratee.r.l = node;
+      node.r = iteratee.r;
+      iteratee.r = node;
+      node.l = iteratee;
     } else {
-      for (let i = 0; i < mod(-k.n, nodes.length - 1); i++)
+      for (let i = 0; i < mod(-node.n, nodes.length - 1); i++)
         iteratee = iteratee.l;
-      if (equal(k, iteratee)) continue;
-      k.l.r = k.r;
-      k.r.l = k.l;
-      iteratee.l.r = k;
-      k.l = iteratee.l;
-      iteratee.l = k;
-      k.r = iteratee;
+      if (equal(node, iteratee)) continue;
+      node.l.r = node.r;
+      node.r.l = node.l;
+      iteratee.l.r = node;
+      node.l = iteratee.l;
+      iteratee.l = node;
+      node.r = iteratee;
     }
   }
   return { accNew: acc, iterateeNew: iteratee };
