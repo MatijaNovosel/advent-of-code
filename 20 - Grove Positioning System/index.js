@@ -15,11 +15,13 @@ const nodes2 = JSON.parse(JSON.stringify(nodes)).map((n) => {
   return n;
 });
 
-for (let i = 0; i < nodes.length; i++) {
-  nodes[i].r = nodes[mod(i + 1, nodes.length)];
-  nodes[i].l = nodes[mod(i - 1, nodes.length)];
-  nodes2[i].r = nodes2[mod(i + 1, nodes2.length)];
-  nodes2[i].l = nodes2[mod(i - 1, nodes2.length)];
+const len = nodes.length;
+
+for (let i = 0; i < len; i++) {
+  nodes[i].r = nodes[mod(i + 1, len)];
+  nodes[i].l = nodes[mod(i - 1, len)];
+  nodes2[i].r = nodes2[mod(i + 1, len)];
+  nodes2[i].l = nodes2[mod(i - 1, len)];
 }
 
 const parseNodes = (nodes, acc, iteratee) => {
