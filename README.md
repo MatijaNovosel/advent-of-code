@@ -36,8 +36,8 @@ The folders are organized by day and contain the solution `index.js`, the input 
 - [x] [Day 18 - Boiling Boulders](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/18%20-%20Boiling%20Boulders)
 - [ ] [Day 19 - Not Enough Minerals](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/19%20-%20Not%20Enough%20Minerals)
 - [x] [Day 20 - Grove Positioning System](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/20%20-%20Grove%20Positioning%20System)
-- [ ] [Day 21 - Monkey Math](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/20%20-%20Monkey%20Math)
-- [ ] [Day 22 - Monkey Map](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/21%20-%20Monkey%20Map)
-- [ ] Day 23
+- [ ] [Day 21 - Monkey Math](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/21%20-%20Monkey%20Math)
+- [ ] [Day 22 - Monkey Map](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/22%20-%20Monkey%20Map)
+- [ ] [Day 23 - Unstable Diffusion](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/23%20-%20Unstable%20Diffusion)
 - [ ] Day 24
 - [ ] Day 25
