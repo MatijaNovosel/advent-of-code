@@ -41,5 +41,5 @@ The folders are organized by day and contain the solution `index.js`, the input 
 |   ⭐   |   ❌   | [Day 21 - Monkey Math](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/21%20-%20Monkey%20Math)                              |
 |   ❌   |   ❌   | [Day 22 - Monkey Map](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/22%20-%20Monkey%20Map)                                |
 |   ❌   |   ❌   | [Day 23 - Unstable Diffusion](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/23%20-%20Unstable%20Diffusion)                |
-|   ❌   |   ❌   | [Day 24 - Blizzard Basin](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/24%20-%20Blizzard%20DBasin)                       |
-|   ❌   |   ❌   | Day 25                                                                                                                                       |
+|   ❌   |   ❌   | [Day 24 - Blizzard Basin](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/24%20-%20Blizzard%20Basin)                        |
+|   ⭐   |   ❌   | [Day 25 - Full of Hot Air](https://github.com/MatijaNovosel/advent-of-code-2022/tree/master/25%20-%20Full%20of%20Hot%20Air)                  |
