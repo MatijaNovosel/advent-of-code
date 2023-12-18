@@ -1,11 +1,11 @@
 {
-  "name": "advent-of-code-2022",
+  "name": "advent-of-code",
   "version": "1.0.0",
-  "description": "Advent of code 2022 - Solved with Javascript",
+  "description": "Advent of code - Solved with Javascript",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "day": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -14,11 +14,7 @@
   "keywords": [
     "javascript",
     "advent-of-code",
-    "aoc",
-    "advent-of-code-2022",
-    "aoc2022",
-    "advent-of-code-2022-javascript",
-    "aoc2022-in-javascript"
+    "aoc"
   ],
   "author": "Matija Novosel",
   "license": "ISC",
